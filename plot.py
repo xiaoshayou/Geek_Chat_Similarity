@@ -37,7 +37,8 @@ city[3]='四'
 #存放从txt读取的数据
 data_raw = np.array([]) 
 
-f = open("E:\Projects\lmy_chat_similarity_res.txt",encoding='utf-8')
+#f = open("E:\Projects\lmy_chat_similarity_res.txt",encoding='utf-8') #old
+f = open("E:\Projects\qxt_chat_l1_gather.txt",encoding='utf-8') #new
 
 line = f.readline()
 while line:
@@ -74,7 +75,7 @@ for l1_code in ([100000,110000,120000,130000,140000,150000,160000,170000,180000,
         
         sub_fig.set_title(city[city_level] +'线城市',fontsize = 30) # 子图标题
         sub_fig.set_xlim(0,50) # x坐标轴范围
-        sub_fig.set_ylim(0,2200) # y坐标轴范围
+        #sub_fig.set_ylim(0,2200) # y坐标轴范围
         sub_fig.tick_params(labelsize = 20) # 坐标轴刻度的字体
         sub_fig.legend(handles = [l1, l2, l3, l4], labels = ['A', 'B', 'C', 'D'], loc = 'best', fontsize = 20) # 图例
         sub_fig.grid(True, linestyle = "-.", color = "black", linewidth = "0.5") #网格
